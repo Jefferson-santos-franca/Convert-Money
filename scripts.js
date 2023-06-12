@@ -150,6 +150,16 @@ const convertValues = async () => {
             currency: "BRL"
         }).format(inputReals * bitcoin);
     }
+
+    if (
+        select1.value === "R$ Real brasileiro" &&
+        select.value === "R$ Real brasileiro"
+    ) {
+        currenyValue.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(inputReals);
+    }
 };
 
 changeCurrency = () => {
